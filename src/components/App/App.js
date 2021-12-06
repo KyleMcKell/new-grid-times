@@ -8,17 +8,17 @@ import MainStoryGrid from '../MainStoryGrid';
 import SpecialtyStoryGrid from '../SpecialtyStoryGrid';
 
 const App = () => {
-  return (
-    <>
-      <Header />
-      <MaxWidthWrapper as="main">
-        <MainStoryGrid />
-        <SpecialtyStoryGrid />
-      </MaxWidthWrapper>
-      <Spacer size={64} />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<MaxWidthWrapper as="main">
+				<MainStoryGrid />
+				<SpecialtyStoryGrid />
+			</MaxWidthWrapper>
+			<Spacer size={64} />
+			<Footer />
+		</>
+	);
 };
 
 export default App;
