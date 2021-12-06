@@ -48,6 +48,8 @@ The main story grid holds the big featured story, the secondary stories, and the
 
 The data for the stories is held in a JS file, `src/data.js`. In a real app, this would be read from a database.
 
+[Figma design](hhttps://www.figma.com/file/BDdNhCeVLye5mFHHxQhkgE/New-Grid-Times)
+
 ---
 
 ## Exercise 1: Header
