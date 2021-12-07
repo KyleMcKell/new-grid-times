@@ -43,12 +43,8 @@ const Abstract = styled.p`
 	white-space: pre-wrap;
 	overflow: hidden;
 
-	@media ${QUERIES.tabletAndUp} {
+	@media ${QUERIES.tabletOnly} {
 		-webkit-line-clamp: 15;
-	}
-
-	@media ${QUERIES.laptopAndUp} {
-		-webkit-line-clamp: 8;
 	}
 `;
 
