@@ -65,6 +65,15 @@ const MainStorySection = styled.section`
 	}
 `;
 
+const SecondaryStorySection = styled.section`
+	grid-area: secondary-stories;
+`;
+
+const StoryList = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
 const VerticalStoryWrapper = styled.div`
 	&:not(:last-of-type) {
 		border-bottom: 1px solid var(--color-gray-300);
@@ -73,13 +82,8 @@ const VerticalStoryWrapper = styled.div`
 	}
 `;
 
-const SecondaryStorySection = styled.section`
-	grid-area: secondary-stories;
-`;
-
-const StoryList = styled.div`
-	display: flex;
-	flex-direction: column;
+const OpinionSection = styled.section`
+	grid-area: opinion-stories;
 `;
 
 const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
@@ -90,10 +94,6 @@ const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
 			margin-bottom: 0px;
 		}
 	}
-`;
-
-const OpinionSection = styled.section`
-	grid-area: opinion-stories;
 `;
 
 const AdvertisementSection = styled.section`
