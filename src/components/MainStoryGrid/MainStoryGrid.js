@@ -8,6 +8,7 @@ import MainStory from '../MainStory';
 import SecondaryStory from '../SecondaryStory';
 import OpinionStory from '../OpinionStory';
 import Advertisement from '../Advertisement';
+import { QUERIES } from '../../constants';
 
 const MainStoryGrid = () => {
 	return (
@@ -53,6 +54,11 @@ const Wrapper = styled.div`
 
 const MainStorySection = styled.section`
 	grid-area: main-story;
+
+	@media ${QUERIES.tabletAndUp} {
+		border-right: 1px solid var(--color-gray-300);
+		padding-right: 16px;
+	}
 `;
 
 const SecondaryStorySection = styled.section`
@@ -70,6 +76,11 @@ const OpinionSection = styled.section`
 
 const AdvertisementSection = styled.section`
 	grid-area: advertisement;
+
+	@media ${QUERIES.laptopAndUp} {
+		border-top: 1px solid var(--color-gray-300);
+		padding-top: 16px;
+	}
 `;
 
 export default MainStoryGrid;
