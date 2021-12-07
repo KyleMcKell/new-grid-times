@@ -3,28 +3,17 @@ import styled from 'styled-components/macro';
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
 	return (
-		<StoryAnchor href={`/story/${id}`}>
+		<a href={`/story/${id}`}>
 			<Wrapper>
 				<Image alt={image.alt} src={image.src} />
 				<Heading>{title}</Heading>
-				<div>
+				<AbstractWrapper>
 					<Abstract>{abstract}</Abstract>
-				</div>
+				</AbstractWrapper>
 			</Wrapper>
-		</StoryAnchor>
+		</a>
 	);
 };
-
-const StoryAnchor = styled.a`
-	&:not(:first-of-type) {
-		padding-top: 16px;
-	}
-
-	&:not(:last-of-type) {
-		border-bottom: 1px solid var(--color-gray-300);
-		padding-bottom: 16px;
-	}
-`;
 
 const Wrapper = styled.article`
 	display: grid;
@@ -54,9 +43,12 @@ const Heading = styled.h2`
 	margin-top: -2px;
 `;
 
+const AbstractWrapper = styled.div`
+	grid-area: abstract;
+`;
+
 const Abstract = styled.p`
 	display: -webkit-box;
-	grid-area: abstract;
 	font-size: 1rem;
 	white-space: pre-wrap;
 	-webkit-box-orient: vertical;
