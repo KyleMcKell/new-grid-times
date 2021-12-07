@@ -89,9 +89,9 @@ const OpinionSection = styled.section`
 const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
 	@media ${QUERIES.tabletOnly} {
 		&:not(:last-of-type) {
-			border-bottom: none;
-			padding-bottom: 0px;
-			margin-bottom: 0px;
+			border-bottom: revert;
+			padding-bottom: revert;
+			margin-bottom: revert;
 		}
 	}
 `;
