@@ -1,22 +1,54 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { QUERIES } from '../../constants';
 
 const OpinionStory = ({ id, title, author, avatar }) => {
 	return (
-		<a href={`/story/${id}`}>
+		<StoryAnchor href={`/story/${id}`}>
 			<Wrapper>
 				<Avatar alt="" src={avatar} />
-				<div>
+				<OpinionText>
 					<AuthorName>{author}</AuthorName>
 					<ArticleTitle>{title}</ArticleTitle>
-				</div>
+				</OpinionText>
 			</Wrapper>
-		</a>
+		</StoryAnchor>
 	);
 };
 
+const StoryAnchor = styled.a`
+	&:not(:first-of-type) {
+		padding-top: 16px;
+	}
+
+	&:not(:last-of-type) {
+		border-bottom: 1px solid var(--color-gray-300);
+		padding-bottom: 16px;
+	}
+
+	@media ${QUERIES.tabletOnly} {
+		&:not(:first-of-type) {
+			padding-top: 0px;
+		}
+
+		&:not(:last-of-type) {
+			border-bottom: none;
+			padding-bottom: 0px;
+		}
+	}
+`;
+
 const Wrapper = styled.article`
 	color: var(--color-gray-900);
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: 'text avatar';
+	gap: 16px;
+
+	@media ${QUERIES.tabletOnly} {
+		grid-template-areas: 'avatar' 'text';
+		gap: 8px;
+	}
 `;
 
 const Avatar = styled.img`
@@ -25,6 +57,11 @@ const Avatar = styled.img`
 	height: 48px;
 	border-radius: 50%;
 	object-fit: cover;
+	grid-area: avatar;
+`;
+
+const OpinionText = styled.div`
+	grid-area: text;
 `;
 
 const AuthorName = styled.p`
