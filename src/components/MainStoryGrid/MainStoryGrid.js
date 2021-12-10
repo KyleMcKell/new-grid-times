@@ -54,6 +54,16 @@ const Wrapper = styled.div`
 		'advertisement';
 	gap: 48px;
 	margin-bottom: 48px;
+
+	@media ${QUERIES.tabletAndUp} {
+		grid-template-areas:
+			'main-story secondary-stories'
+			'advertisement advertisement'
+			'opinion-stories opinion-stories';
+		grid-template-columns: auto minmax(125px, 250px);
+		row-gap: 48px;
+		column-gap: 16px;
+	}
 `;
 
 const MainStorySection = styled.section`
