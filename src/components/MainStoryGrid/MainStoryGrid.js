@@ -127,13 +127,13 @@ const OpinionStoryList = styled(StoryList)`
 
 const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
 	@media ${QUERIES.tabletOnly} {
+		flex: 1;
+
 		&:not(:last-of-type) {
 			border-bottom: revert;
 			padding-bottom: revert;
 			margin-bottom: revert;
 		}
-
-		flex: 1;
 	}
 `;
 
