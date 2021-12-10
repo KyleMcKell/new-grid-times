@@ -29,13 +29,13 @@ const MainStoryGrid = () => {
 
 			<OpinionSection>
 				<SectionTitle>Opinion</SectionTitle>
-				<StoryList>
+				<OpinionStoryList>
 					{OPINION_STORIES.map((story, index) => (
 						<OpinionStoryWrapper key={story.id}>
 							<OpinionStory {...story} />
 						</OpinionStoryWrapper>
 					))}
-				</StoryList>
+				</OpinionStoryList>
 			</OpinionSection>
 
 			<AdvertisementSection>
@@ -86,6 +86,13 @@ const OpinionSection = styled.section`
 	grid-area: opinion-stories;
 `;
 
+const OpinionStoryList = styled(StoryList)`
+	@media ${QUERIES.tabletOnly} {
+		flex-direction: row;
+		gap: 32px;
+	}
+`;
+
 const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
 	@media ${QUERIES.tabletOnly} {
 		&:not(:last-of-type) {
@@ -93,6 +100,8 @@ const OpinionStoryWrapper = styled(VerticalStoryWrapper)`
 			padding-bottom: revert;
 			margin-bottom: revert;
 		}
+
+		flex: 1;
 	}
 `;
 
