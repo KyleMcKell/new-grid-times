@@ -61,7 +61,7 @@ const Wrapper = styled.div`
 			'advertisement advertisement'
 			'opinion-stories opinion-stories';
 		grid-template-columns:
-			minmax(250px, 3fr)
+			minmax(250px, 2fr)
 			minmax(200px, 1fr);
 		row-gap: 48px;
 		column-gap: 16px;
